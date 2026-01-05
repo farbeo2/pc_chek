@@ -26,7 +26,7 @@ def estimate_fps(cpu_score, gpu_score, ram_gb, ssd, resolution_scale, quality="m
     quality_map = {"low": 1.2, "medium": 1.0, "high": 0.8, "ultra": 0.6}
     qmod = quality_map.get(quality, 1.0)
 
-    fps = (base * cpu_factor * ram_factor * ssd_bonus * qmod)/80
+    fps = (base * cpu_factor * ram_factor * ssd_bonus * qmod)/120
     # Ограничим FPS реалистично
     return round(max(1, fps), 1)
 
@@ -112,4 +112,5 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
