@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Результат анализа</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Результаты анализа</h2>
+
+    <div class="result-card">
+      <div class="result-item">
+        <strong>CPU:</strong> {{ result.cpu_model }}
+      </div>
+      <div class="result-item">
+        <strong>GPU:</strong> {{ result.gpu_model }}
+      </div>
+      <div class="result-item">
+        <strong>ОЗУ:</strong> {{ result.ram }} ГБ
+      </div>
+      <div class="result-item">
+        <strong>Накопитель:</strong> {{ result.storage }}
+      </div>
+      <div class="result-item">
+        <strong>Разрешение:</strong> {{ result.resolution }} ({{ result.quality }})
+      </div>
+    </div>
+
+    <h3>Оценка производительности</h3>
+    <div class="fps-display">
+      Примерные FPS: <strong>{{ result.fps_est }}</strong>
+    </div>
+
+    <div class="result-card">
+      <div class="result-item">
+        <strong>Анализ узкого места:</strong> {{ result.bottleneck }}
+      </div>
+      <div class="result-item">
+        <strong>Цена/производительность:</strong> CPU: {{ result.cpu_pp }}, GPU: {{ result.gpu_pp }}
+      </div>
+    </div>
+
+    <h3>Рекомендации</h3>
+    <ul>
+      {% for r in result.recs %}
+        <li>{{ r }}</li>
+      {% endfor %}
+    </ul>
+
+    <a href="/">Новая проверка</a>
+  </div>
+</body>
+</html>
+
