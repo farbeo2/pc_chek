@@ -202,4 +202,25 @@ a:hover {
         margin-bottom: 5px;
     }
 }
+/* ===== Для каких задач подходит ===== */
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.tasks li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #e9edff 0%, #f4ecff 100%);
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 14px;
+    font-weight: 500;
+    border-left: 5px solid #667eea;
+    box-shadow: 0 4px 10px rgba(102, 126, 234, 0.15);
+}
+
 
