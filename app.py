@@ -57,14 +57,17 @@ def get_usage_tasks(cpu_score, gpu_score, ram, fps):
     if ram >= 8:
         tasks.append(("Офис и учёба", "💼"))
 
-    if fps >= 30:
+    if cpu_score >= 3 and ram >= 16:
         tasks.append(("Домашнее использование и мультимедиа", "🎬"))
 
-    if fps >= 40:
+    if cpu_score >= 5 and ram >= 8:
         tasks.append(("Киберспортивные и лёгкие игры (CS2, Dota 2, LoL)", "🎮"))
 
-    if fps >= 60 and ram >= 16:
-        tasks.append(("Современные игры (Full HD, средние настройки)", "🔥"))
+    if cpu_score >= 5  and ram >= 16:
+        if cpu_score >= 7 and ram >= 32: 
+            tasks.append(("Современные игры (QHD, высокие настройки графики)", "🔥"))
+        else:
+            tasks.append(("Современные игры (Full HD, средние  настройки графики)", "🔥"))
 
     if cpu_score >= 4 and ram >= 16:
         tasks.append(("Работа с графикой (Photoshop, Figma)", "🎨"))
@@ -144,6 +147,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
