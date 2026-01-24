@@ -28,6 +28,18 @@
       </div>
     </div>
 
+    <!-- ================= НОВОЕ ================= -->
+    <h3>Для каких задач подходит система</h3>
+
+    <div class="result-card">
+      <ul class="tasks">
+        {% for task, icon in result.tasks %}
+          <li>{{ icon }} {{ task }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <!-- ========================================= -->
+
     <h3>Оценка производительности</h3>
     <div class="fps-display">
       Примерные FPS: <strong>{{ result.fps_est }}</strong>
@@ -37,8 +49,11 @@
       <div class="result-item">
         <strong>Анализ узкого места:</strong> {{ result.bottleneck }}
       </div>
+
+      <!-- этот блок МОЖЕШЬ ОСТАВИТЬ или удалить по желанию -->
       <div class="result-item">
-        <strong>Цена/производительность:</strong> CPU: {{ result.cpu_pp }}, GPU: {{ result.gpu_pp }}
+        <strong>Цена/производительность:</strong>
+        CPU: {{ result.cpu_pp }}, GPU: {{ result.gpu_pp }}
       </div>
     </div>
 
@@ -53,4 +68,3 @@
   </div>
 </body>
 </html>
-
