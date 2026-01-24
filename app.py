@@ -51,7 +51,34 @@ def price_performance(cpu_score, cpu_price, gpu_score, gpu_price):
     cpu_pp = cpu_score / max(1, cpu_price)
     gpu_pp = gpu_score / max(1, gpu_price)
     return round(cpu_pp, 2), round(gpu_pp, 2)
+def get_usage_tasks(cpu_score, gpu_score, ram, fps):
+    tasks = []
 
+    if ram >= 8:
+        tasks.append(("Офис и учёба", "💼"))
+
+    if fps >= 30:
+        tasks.append(("Домашнее использование и мультимедиа", "🎬"))
+
+    if fps >= 40:
+        tasks.append(("Киберспортивные и лёгкие игры (CS2, Dota 2, LoL)", "🎮"))
+
+    if fps >= 60 and ram >= 16:
+        tasks.append(("Современные игры (Full HD, средние настройки)", "🔥"))
+
+    if cpu_score >= 4 and ram >= 16:
+        tasks.append(("Работа с графикой (Photoshop, Figma)", "🎨"))
+
+    if cpu_score >= 6 and ram >= 16:
+        tasks.append(("Монтаж видео (Full HD)", "🎞️"))
+
+    if cpu_score >= 8 and gpu_score >= 6 and ram >= 32:
+        tasks.append(("3D-моделирование и рендеринг", "🧊"))
+
+    if cpu_score >= 4 and ram >= 16:
+        tasks.append(("Программирование и разработка", "💻"))
+
+    return tasks
 @app.route("/", methods=["GET"])
 def index():
     return render_template("index.html", cpus=CPUS.keys(), gpus=GPUS.keys(), resolutions=RESOLUTION_SCALE.keys())
@@ -112,6 +139,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
