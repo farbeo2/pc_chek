@@ -75,7 +75,7 @@ def get_usage_tasks(cpu_score, gpu_score, ram, fps):
     if cpu_score >= 8 and ram >= 16 and gpu_score >= 5:
         if cpu_score >= 9 and ram >= 16 and gpu_score >= 7:
             tasks.append(("Монтаж видео (QHD)", "🎞️"))
-        elif:
+        else:
             tasks.append(("Монтаж видео (Full HD)", "🎞️"))
 
     if cpu_score >= 10 and gpu_score >= 7 and ram >= 32:
@@ -150,6 +150,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
