@@ -73,7 +73,7 @@ def get_usage_tasks(cpu_score, gpu_score, ram, fps):
         tasks.append(("Работа с графикой (Photoshop, Figma)", "🎨"))
 
     if cpu_score >= 8 and ram >= 16 and gpu_score >= 5:
-        if cpu_score >= 12 and ram >= 32 and gpu_score >= 8:
+        if cpu_score >= 8000 and ram >= 32 and gpu_score >= 8:
             tasks.append(("Монтаж видео (QHD)", "🎞️"))
         else:
             tasks.append(("Монтаж видео (Full HD)", "🎞️"))
@@ -150,6 +150,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
