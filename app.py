@@ -39,7 +39,7 @@ def analyze_bottleneck(cpu_score, gpu_score):
       - иначе — сбалансировано
     """
     ratio = cpu_score / max(1, gpu_score)
-    if ratio < 0.7:
+    if ratio < 0.55:
         return "CPU (процессор) явно слабее — возможны фризы при нагрузке на CPU"
     elif ratio > 1.4:
         return "GPU (видеокарта) ограничивает производительность — стоит апгрейдить GPU"
@@ -147,6 +147,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
