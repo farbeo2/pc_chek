@@ -57,7 +57,7 @@ def get_usage_tasks(cpu_score, gpu_score, ram, fps):
     if ram >= 8:
         tasks.append(("Офис и учёба", "💼"))
 
-    if cpu_score >= 3 and ram >= 16:
+    if cpu_score >= 3 and ram >= 8:
         tasks.append(("Домашнее использование и мультимедиа", "🎬"))
 
     if cpu_score >= 5 and ram >= 8:
@@ -147,6 +147,7 @@ def analyze():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
