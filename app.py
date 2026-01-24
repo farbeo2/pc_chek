@@ -121,29 +121,30 @@ def analyze():
     if not recs:
         recs.append("Система сбалансирована — следите за температурой и драйверами.")
 # Вычисляем задачи для блока "Для каких задач подходит система"
-tasks = get_usage_tasks(cpu_score, gpu_score, ram, fps_est)
+    tasks = get_usage_tasks(cpu_score, gpu_score, ram, fps_est)
 
 # Создаём словарь result и добавляем tasks
-result = {
-    "cpu_model": cpu_model,
-    "gpu_model": gpu_model,
-    "ram": ram,
-    "storage": storage,
-    "resolution": resolution,
-    "quality": quality,
-    "fps_est": fps_est,
-    "bottleneck": bottleneck,
-    "cpu_pp": cpu_pp,
-    "gpu_pp": gpu_pp,
-    "recs": recs,
-    "tasks": tasks  # <-- вот это важно
-}
+    result = {
+        "cpu_model": cpu_model,
+        "gpu_model": gpu_model,
+        "ram": ram,
+        "storage": storage,
+        "resolution": resolution,
+        "quality": quality,
+        "fps_est": fps_est,
+        "bottleneck": bottleneck,
+        "cpu_pp": cpu_pp,
+        "gpu_pp": gpu_pp,
+        "recs": recs,
+        "tasks": tasks  # <-- вот это важно
+    }
 
 
     return render_template("result.html", result=result)
 
 if __name__ == "__main__":
     app.run(debug=True)
+
 
 
 
