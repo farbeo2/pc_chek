@@ -38,18 +38,24 @@ GPUS = {
     "NVIDIA RTX 3070 Ti": {"score": 33000, "price": 65000},
     "NVIDIA RTX 3080": {"score": 40000, "price": 80000},
     "NVIDIA RTX 4080": {"score": 50000, "price": 90000},
-    "NVIDIA RTX 4090": {"score": 57000, "price": 150000},
+    "NVIDIA RTX 4090": {"score": 57000, "price": 120000},
+    "NVIDIA RTX 5060": {"score": 30000, "price": 42000},
+    "NVIDIA RTX 5060 Ti": {"score": 34000, "price": 47000},
+    "NVIDIA RTX 5070": {"score": 40000, "price": 60000},
+    "NVIDIA RTX 5070 Ti": {"score": 45000, "price": 70000},
+    "NVIDIA RTX 5080": {"score": 55000, "price": 88000},
+    "NVIDIA RTX 5090": {"score": 65000, "price": 120000},
     # AMD
-    "AMD RX 570": {"score": 9000, "price": 15000},
-    "AMD RX 580": {"score": 10000, "price": 18000},
+    "AMD RX 570": {"score": 7000, "price": 10000},
+    "AMD RX 580": {"score": 9000, "price": 15000},
     "AMD RX 590": {"score": 12000, "price": 20000},
     "AMD RX 6600": {"score": 20000, "price": 30000},
     "AMD RX 6600 XT": {"score": 22000, "price": 35000},
     "AMD RX 6700 XT": {"score": 28000, "price": 45000},
     "AMD RX 6800": {"score": 38000, "price": 70000},
     "AMD RX 6800 XT": {"score": 42000, "price": 75000},
-    "AMD RX 7800 XT": {"score": 42000, "price": 60000},
-    "AMD RX 7900 XT": {"score": 50000, "price": 90000},
+    "AMD RX 7800 XT": {"score": 42000, "price": 65000},
+    "AMD RX 7900 XT": {"score": 50000, "price": 80000},
 }
 
 # Масштаб разрешения экрана (влияет на нагрузку на GPU)
@@ -59,6 +65,7 @@ RESOLUTION_SCALE = {
     "2560x1440": 1.8,
     "3840x2160": 3.5,
 }
+
 
 
 
